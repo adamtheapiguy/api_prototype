@@ -1,0 +1,9 @@
+{
+    "name": "express-template-HelloWorld",
+    "description": "Hello World ExpressJS WebService",
+    "version": "0.0.1",
+    "private": true,
+    "dependencies": {
+        "express": "latest"
+    }
+}

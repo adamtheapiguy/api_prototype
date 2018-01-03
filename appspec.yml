@@ -1,0 +1,19 @@
+version: 0.0
+os: linux
+files:
+  - source: /server.js
+    destination: /home/ec2-user/express-service
+  - source: /package.json
+    destination: /home/ec2-user/express-service
+hooks:
+  AfterInstall:
+    - location: scripts/install_dependencies
+      timeout: 300
+      runas: root
+    - location: scripts/start_server
+      timeout: 300
+      runas: root
+  ApplicationStop:
+    - location: scripts/stop_server
+      timeout: 300
+      runas: root
